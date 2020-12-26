@@ -24,6 +24,8 @@ window.onload = function() {
         myLiffId = defaultLiffId;
         initializeLiffOrDie(myLiffId);
     }
+
+
 };
  
 /**
