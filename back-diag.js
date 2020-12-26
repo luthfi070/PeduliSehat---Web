@@ -14,8 +14,6 @@ function nextS(namaElement, tujuanPage) {
         }
     }
 
-    
-
     var total = 5;
     for(var i=1; i<=total; i++){
 
