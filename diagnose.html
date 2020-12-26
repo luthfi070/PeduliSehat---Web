@@ -25,9 +25,72 @@
                         Tidak
                         </label>
                     </div>
-                    <button type="button" class="btn btn-primary" onClick="nextS('radioKontak', 'diagnose2')">Next</button>
-                </div>                
+                    <button type="button" class="btn btn-primary" onClick="nextS('radioKontak', '2')">Next</button>
+                </div>
+                <div id="question2">
+                    <h3>Apakah anda pernah keluar rumah ?</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioKeluar" value="ya" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Ya
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="radioKeluar" value="tidak" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Tidak
+                        </label>
+                    </div>
+                        <button type="button" class="btn btn-primary" onClick="nextS('radioKeluar','3')">Next</button>
+                </div>
+                <div id="question3">
+                    <h3>Apakah anda merasa demam ?</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDemam" value="ya" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Ya
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="radioDemam" value="tidak" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Tidak
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary" onClick="nextS('radioDemam','4')">Next</button>
+                </div>
+                <div id="question4">
+                    <h3>Apakah anda merasa sesak nafas ?</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioSesak" value="ya" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Ya
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="radioSesak" value="tidak" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Tidak
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary" onClick="nextS('radioSesak', '5')">Next</button>
+                </div>       
+                <div id="question5">
+                    <h3>Apakah hidung anda bisa mencium bau (indra penciuman) ?</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioBau" value="ya" id="radio">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Ya
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="radioBau" value="tidak" id="radio" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Tidak
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary" onClick="nextS('radioBau', 'hasil')">Next</button>             
+                </div>    
             </center>
+        </div>
+        <div id="hasil">
+            <h1>hasil</h1>
         </div>
     </body>
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
