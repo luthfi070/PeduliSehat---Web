@@ -38,6 +38,7 @@ function initializeLiffOrDie(myLiffId) {
         document.getElementById("liffAppContent").classList.add('hidden');
         document.getElementById("liffIdErrorMessage").classList.remove('hidden');
     } else {
+        console.log("start");
         initializeLiff(myLiffId);
     }
 }
