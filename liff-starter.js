@@ -57,6 +57,16 @@ function initializeLiff(myLiffId) {
             console.log(err);
         });
 }
+
+function getDisplayName() {
+    liff.getProfile()
+    .then(profile => {
+    document.getElementById('user').textContent = profile.displayName;
+    })
+    .catch((err) => {
+    console.log('error', err);
+    })
+}
  
 /**
  * Initialize the app by calling functions handling individual app components
