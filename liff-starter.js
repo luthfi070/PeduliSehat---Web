@@ -115,6 +115,7 @@ function registerButtonHandlers() {
     });
 
     document.getElementById('sendMessageButton').addEventListener('click', function() {
+        console.log("halo")
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
         } else {
