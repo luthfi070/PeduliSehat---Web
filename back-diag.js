@@ -2,7 +2,6 @@ var data = [];
 
 function pindahDiag() {
     window.location.href = "diagnose.html";
-    console.log("halo");
 }
 
 function nextS(namaElement, tujuanPage) {
