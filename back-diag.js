@@ -16,3 +16,18 @@ function nextS(namaElement, tujuanPage) {
         }
     }
 }
+
+function send(){
+    if (!liff.isInClient()) {
+        sendAlertIfNotInClient();
+    } else {
+        liff.sendMessages([{
+            'type': 'text',
+            'text': "Catatan baru berhasil disimpan"
+        }]).then(function() {
+            alert('Catatan Tersimpan');
+        }).catch(function(error) {
+            alert('Aduh kok error ya...');
+        });
+    }
+}
