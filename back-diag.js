@@ -23,7 +23,7 @@ function send(){
     } else {
         liff.sendMessages([{
             'type': 'text',
-            'text': data
+            'text': 'asd'
         }]).then(function() {
             alert('Catatan Tersimpan');
         }).catch(function(error) {
