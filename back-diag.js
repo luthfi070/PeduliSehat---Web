@@ -23,7 +23,7 @@ function send(){
     } else {
         liff.sendMessages([{
             'type': 'text',
-            'text': "Catatan baru berhasil disimpan"
+            'text': data
         }]).then(function() {
             alert('Catatan Tersimpan');
         }).catch(function(error) {
