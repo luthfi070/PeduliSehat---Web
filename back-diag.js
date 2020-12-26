@@ -27,7 +27,7 @@ function send(){
         }]).then(function() {
             alert('Catatan Tersimpan');
         }).catch(function(error) {
-            alert('Aduh kok error ya...');
+            alert('Aduh kok error ya...', error);
         });
     }
 }
