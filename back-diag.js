@@ -40,24 +40,73 @@ function nextS(namaElement, tujuanPage) {
 
 function finish() {
     x = document.getElementsByName('radioBau');
-    console.log(x.value);
     data.push(x.value);
-    console.log(data);
 }
 
 function send(){
+    var count = 0;
     console.log(data);
-    // if (!liff.isInClient()) {
-    //     sendAlertIfNotInClient();
-    // } else {
-        
-    //     liff.sendMessages([{
-    //         'type': 'text',
-    //         'text': 'asd'
-    //     }]).then(function() {
-    //         alert('Catatan Tersimpan');
-    //     }).catch(function(error) {
-    //         alert('Aduh kok error ya...', error);
-    //     });
-    // }
+    hasil = "";
+    for(i = 0; i < data.length; i++){
+        if(data[i] == "ya"){
+            count += 1;
+        }else{
+            count += 0;
+        }
+    }
+
+    if(count > 2){
+        if(data[0] == "ya"){
+            hasil = "ya";
+        }else if(data[4] == "ya"){
+            hasil = "ya";
+        }else if(data[3] == "ya"){
+            hasil = "ya";
+        }else{
+            hasil = "hati hati"
+        }
+    }else{
+        if(data[0] == "ya"){
+            hasil = "hati hati"
+        }else if(data[4] == "ya"){
+            hasil = "hati hati"
+        }else if(data[3] == "ya"){
+            hasil = "hati hati"
+        }else{
+            hasil = "istirahat"
+        }
+    }
+
+    if (!liff.isInClient()) {
+        sendAlertIfNotInClient();
+    } else {
+        if(hasil == "ya"){
+            liff.sendMessages([{
+                'type': 'text',
+                'text': 'Ada kemungkinan > 90% anda terkena virus corona !, anda mengalami beberapa gejala kuat indikasi virus corona, segera hubungi rumah sakit rujukan terdekat atau segera lakukan swab test atau test lainnya!'
+            }]).then(function() {
+                alert('Pesan terkirim, yuk cek PeduliSehat');
+            }).catch(function(error) {
+                alert('Aduh kok error ya...', error);
+            });
+        }else if(hasil == "hati hati"){
+            liff.sendMessages([{
+                'type': 'text',
+                'text': 'Ada kemungkinan < 50% anda terkena virus corona !, tetap beristirahat dirumah, jika dalam 4 hari tidak kunjung sembuh maka segera hubungi rumah sakit terdekat, tetap berhati hati dan makan makanan yang sehat ya~'
+            }]).then(function() {
+                alert('Pesan terkirim, yuk cek PeduliSehat');
+            }).catch(function(error) {
+                alert('Aduh kok error ya...', error);
+            });
+        }else if(hasil == "istirahat"){
+            liff.sendMessages([{
+                'type': 'text',
+                'text': 'Anda tidak mengalami gejala kuat corona, namun anda mungkin sedang demam atau kurang istirahat, silahkan istirahat secukupnya, jika gejala bertambah segera hubungi rumah sakit terdekat'
+            }]).then(function() {
+                alert('Pesan terkirim, yuk cek PeduliSehat');
+            }).catch(function(error) {
+                alert('Aduh kok error ya...', error);
+            });
+        }
+    }
 }
