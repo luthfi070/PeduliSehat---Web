@@ -4,6 +4,10 @@ function pindahDiag() {
     window.location.href = "diagnose.html";
 }
 
+function pindahRs() {
+    window.location.href = "rumahSakit.html";
+}
+
 function nextS(namaElement, tujuanPage) {
     var radio = document.getElementsByName(namaElement);
 
